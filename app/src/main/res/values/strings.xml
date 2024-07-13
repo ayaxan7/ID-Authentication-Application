@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ID Authentication</string>
+    <string name="hint_enter_number">Enter UID number</string>
+    <string name="submit_button">Submit</string>
+    <string name="textview">TextView</string>
+    <string name="id_authentication">ID Authentication</string>
+</resources>

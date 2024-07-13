@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ID Authentication</string>
+    <string name="hint_enter_number">Number Daalein</string>
+    <string name="submit_button">Jamaa karein</string>
+</resources>
