@@ -66,15 +66,17 @@
 
     <TextView
         android:id="@+id/tvResults"
-        android:layout_width="164dp"
-        android:layout_height="57dp"
+        android:layout_width="298dp"
+        android:layout_height="132dp"
         android:layout_gravity="center|center_vertical"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:fontFamily="@font/roboto_slab_bold"
         android:gravity="center"
         android:text="@string/textview"
+        android:textColor="@color/primary_text"
         android:textSize="20sp"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
 </LinearLayout>

@@ -34,13 +34,21 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String id = etID.getText().toString().trim();
-                if (id.equalsIgnoreCase("6022") || id.equalsIgnoreCase("7590")) {
+                String idNumber = etID.getText().toString().trim();
+                if (idNumber.length() == 12) {
+                    String dob = idNumber.substring(0, 6);
+                    int gender = Integer.parseInt(idNumber.substring(6, 10));
+                    int citizenship = Character.getNumericValue(idNumber.charAt(10));
+                    String sGender = (gender >= 5000 && gender<=9999) ? "Male" : "Female";
+                    String sCitizenship = (citizenship == 0) ? "South African Citizen" : "Permanent Resident";
+
                     tvResults.setVisibility(View.VISIBLE);
-                    tvResults.setText("Member Approved");
+                    tvResults.setText("Date Of Birth: " + dob.substring(0, 2) + "-" + dob.substring(2, 4) + "-" + dob.substring(4) + "\n" +
+                            "Gender: " + sGender + "\n" +
+                            "Nationality: " + sCitizenship);
                 } else {
                     tvResults.setVisibility(View.VISIBLE);
-                    tvResults.setText("Member Not Approved");
+                    tvResults.setText("Enter Valid Input");
                 }
             }
         });
